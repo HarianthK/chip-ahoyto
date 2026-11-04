@@ -14,6 +14,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 
 * Bumped emukit dependency to 0.10.24
+* Bumped vcpkg revision used by the SDL frontend to 2025.10.17
 * Faster and more resilient CI builds through caching of native dependencies
 
 ### Fixed
@@ -23,6 +24,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 * The shift flag now comes from the register that is shifted, which is `VY` unless the shifting quirk is on
 * `FX0A` now completes when the key is released rather than when it goes down
 * `EX9E` and `EXA1` mask the register to a key number instead of indexing past the key array
+* Web frontend builds in GitHub Actions after a new release of a build dependency rejected the cache location of the build containers
+* SDL frontend builds in GitHub Actions after cached native dependencies were reused across incompatible build containers and dependency revisions
 
 ## [0.4.2] - 2023-02-13
 
